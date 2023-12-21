@@ -1,0 +1,10 @@
+public class EnergyManagementSystem {
+    public static void main(String[] args) {
+       Battery battery = new Battery(50000);
+        SolarPanel solarPanel = new SolarPanel(1000);
+        EnergyManager energyManager = new EnergyManager();
+        energyManager.addComponent(battery);
+        energyManager.addComponent(solarPanel);
+        int totalCapacity = energyManager.calculateTotalCapacity();
+        System.out.println("Total Battery Capacity: " + totalCapacity + " kWh");
+    }
